@@ -32,7 +32,7 @@ jobs:
 
     - name: Test code
       run: |
-        npx vitest
+        npm run test
 
   lint:
     runs-on: ubuntu-20.04
@@ -52,7 +52,7 @@ jobs:
 
     - name: Lint code
       run: |
-        npx eslint .
+        npm run lint
 
   build:
     runs-on: ubuntu-20.04
