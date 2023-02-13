@@ -1,21 +1,21 @@
 import React, { FC } from 'react';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
 	label?: string;
 	bordered?: boolean;
-	icon?: () => React.ReactNode;
+	icon?: string;
 	iconPosition?: 'left' | 'right';
 	errorMessage?: string;
 }
 
-const Input: FC<Props> = ({ label, bordered, icon, iconPosition, errorMessage, ...rest }) => {
+const Textarea: FC<Props> = ({ label, bordered, icon, iconPosition, errorMessage, ...rest }) => {
 	return (
 		<>
 			<div className={`relative ${rest.disabled && 'opacity-40'}`}>
 				{label && <label className='font-NotoSans-SemiBold mr-auto text-purple-700'>{label}</label>}
 				<div className='relative'>
-					<input
-						data-testid='input'
+					<textarea
+						data-testid='textarea'
 						{...rest}
 						className={`
                     ${errorMessage ? 'bg-red-500 bg-opacity-10 border border-red-400' : 'bg-white'}
@@ -23,11 +23,11 @@ const Input: FC<Props> = ({ label, bordered, icon, iconPosition, errorMessage, .
                     ${bordered && 'border border-slate-400 shadow-none'}
                     ${icon && iconPosition === 'left' && 'pl-14'}
                     ${icon && iconPosition === 'right' && 'pr-14'}
-                    rounded-xl w-full p-4 mt-2 focus:outline-none shadow-xl `}
+                    min-h-[170px] resize-none rounded-xl w-full p-4 mt-2 focus:outline-none shadow-xl `}
 					/>
 					{icon && (
 						<div className={`absolute top-1/2 -translate-y-1/2 ${iconPosition === 'left' ? 'left-5' : 'right-5'}`}>
-							{icon()}
+							<i className='fa-regular fa-envelope text-2xl text-purple-400'></i>
 						</div>
 					)}
 				</div>
@@ -37,4 +37,4 @@ const Input: FC<Props> = ({ label, bordered, icon, iconPosition, errorMessage, .
 	);
 };
 
-export default Input;
+export default Textarea;

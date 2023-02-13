@@ -1,5 +1,7 @@
+import Playground from './Playground';
+
 function App() {
-	return <div data-testid='app'>App</div>;
+	return <Playground />;
 }
 
 export default App;
