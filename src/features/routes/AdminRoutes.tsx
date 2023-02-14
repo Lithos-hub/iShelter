@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Error404 from '../Error404';
-import AdminPage from '../admin/adminPage';
+import Error404 from '@/features/Error404';
+import AdminPage from '@/features/admin/adminPage';
 
 const AdminRoutes = () => {
 	return (

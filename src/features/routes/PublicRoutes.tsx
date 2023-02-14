@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Error404 from '../Error404';
-import LandingPage from '../public/LandingPage';
-import AccessPage from '../public/AccessPage';
-import SheltersPage from '../public/SheltersPage';
-import ShelterDetails from '../public/ShelterDetails';
+import Error404 from '@/features/Error404';
+import LandingPage from '@/features/public/LandingPage';
+import AccessPage from '@/features/public/AccessPage';
+import SheltersPage from '@/features/public/SheltersPage';
+import ShelterDetails from '@/features/public/ShelterDetails';
 
 const PublicRoutes = () => {
 	return (

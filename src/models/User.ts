@@ -1,11 +1,12 @@
 export interface User {
-  _id: string;
-  email: string;
-  createdAt?: string;
-  updatedAt?: string;
+	_id: string;
+	email: string;
+	role: 'super' | 'admin' | 'staff';
+	createdAt?: string;
+	updatedAt?: string;
 }
 
 export interface UserLogin {
-  email: string;
-  password: string;
+	email: string;
+	password: string;
 }

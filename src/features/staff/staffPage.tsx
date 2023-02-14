@@ -1,5 +1,5 @@
-const staffPage = () => {
-	return <div>staffPage</div>;
+const StaffPage = () => {
+	return <div>StaffPage</div>;
 };
 
-export default staffPage;
+export default StaffPage;

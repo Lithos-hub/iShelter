@@ -1,5 +1,5 @@
-const superadminPage = () => {
-	return <div>superadminPage</div>;
+const SuperadminPage = () => {
+	return <div>SuperadminPage</div>;
 };
 
-export default superadminPage;
+export default SuperadminPage;
