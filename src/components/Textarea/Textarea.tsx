@@ -20,10 +20,9 @@ const Textarea: FC<Props> = ({ label, bordered, icon, iconPosition, errorMessage
 						className={`
                     ${errorMessage ? 'bg-red-500 bg-opacity-10 border border-red-400' : 'bg-white'}
                     ${rest.disabled && 'bg-slate-300'}
-                    ${bordered && 'border border-slate-400 shadow-none'}
                     ${icon && iconPosition === 'left' && 'pl-14'}
                     ${icon && iconPosition === 'right' && 'pr-14'}
-                    min-h-[170px] resize-none rounded-xl w-full p-4 mt-2 focus:outline-none shadow-xl `}
+                    border min-h-[170px] resize-none rounded-xl w-full p-4 mt-2 focus:outline-none shadow-xl `}
 					/>
 					{icon && (
 						<div className={`absolute top-1/2 -translate-y-1/2 ${iconPosition === 'left' ? 'left-5' : 'right-5'}`}>

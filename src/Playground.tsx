@@ -34,12 +34,19 @@ const Playground = () => {
 						<div className='grid grid-cols-4 gap-5'>
 							<Input {...getFieldProps('playground_input')} name='playground_input' label='Input (default)' />
 							<Input {...getFieldProps('playground_input')} name='playground_input' label='Input (disabled)' disabled />
-							<Input {...getFieldProps('playground_input')} name='playground_input' label='Input (bordered)' bordered />
 							<Input
 								{...getFieldProps('playground_input')}
 								name='playground_input'
 								label='Input (error)'
 								errorMessage='Required'
+							/>
+							<Input
+								{...getFieldProps('playground_input')}
+								name='playground_input'
+								label='Input (success)'
+								success
+								icon={() => <i className='fa-solid fa-circle-check text-green-500 text-2xl'></i>}
+								iconPosition='right'
 							/>
 							<Input
 								{...getFieldProps('playground_input')}
@@ -60,19 +67,13 @@ const Playground = () => {
 						</div>
 
 						<h1 className='text-5xl font-bold text-slate-900 my-5'>Textareas</h1>
-						<div className='grid grid-cols-2 gap-5'>
+						<div className='grid grid-cols-3 gap-5'>
 							<Textarea {...getFieldProps('playground_input')} name='playground_input' label='Textarea (default)' />
 							<Textarea
 								{...getFieldProps('playground_input')}
 								name='playground_input'
-								label='Textarea (default)'
+								label='Textarea (disabled)'
 								disabled
-							/>
-							<Textarea
-								{...getFieldProps('playground_input')}
-								name='playground_input'
-								label='Textarea (bordered)'
-								bordered
 							/>
 							<Textarea
 								{...getFieldProps('playground_input')}
